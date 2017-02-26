@@ -5,6 +5,10 @@ import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
+
+import com.anwesome.app.soundvisualization.graphs.VisualizingGraph;
+import com.anwesome.app.soundvisualization.graphs.VisualizingGraphType;
+
 import java.io.FileDescriptor;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -21,9 +25,9 @@ public class VisualizingPlayer {
     private VisualizingView visualizingView;
     private boolean prepared = false;
     private String fileName;
-    public VisualizingPlayer(Activity activity,String fileName) {
+    public VisualizingPlayer(Activity activity, String fileName, VisualizingGraphType visualizingGraphType) {
         this.activity = activity;
-        visualizingView = new VisualizingView(activity);
+        visualizingView = new VisualizingView(activity,visualizingGraphType);
         this.fileName = fileName;
         setupMediaPlayer();
         activity.setContentView(visualizingView);
