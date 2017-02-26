@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.anwesome.app.soundvisualization.VisualizingPlayer;
+import com.anwesome.app.soundvisualization.graphs.VisualizingGraphType;
 
 public class MainActivity extends AppCompatActivity {
     VisualizingPlayer player;
@@ -11,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        player = new VisualizingPlayer(this,"surc.mp3");
+        player = new VisualizingPlayer(this,"surc.mp3", VisualizingGraphType.BARGRAPH);
         player.play();
     }
     public void onPause() {
