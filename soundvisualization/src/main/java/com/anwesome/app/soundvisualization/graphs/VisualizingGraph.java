@@ -23,7 +23,7 @@ public class VisualizingGraph {
                 if(f>max) {
                     max = f;
                 }
-                if(f == 0) {
+                if(f <= 0) {
                     continue;
                 }
                 soundData.add(f);
