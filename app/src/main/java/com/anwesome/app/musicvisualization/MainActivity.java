@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        player = new VisualizingPlayer(this,"surc.mp3", VisualizingGraphType.BARGRAPH);
+        player = new VisualizingPlayer(this,"surc.mp3", VisualizingGraphType.CIRCLEGRAPH);
         player.play();
     }
     public void onPause() {
