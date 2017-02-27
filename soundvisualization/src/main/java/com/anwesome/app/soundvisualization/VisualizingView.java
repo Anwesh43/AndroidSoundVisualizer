@@ -5,6 +5,7 @@ import android.graphics.*;
 import android.view.View;
 
 import com.anwesome.app.soundvisualization.graphs.BarGraph;
+import com.anwesome.app.soundvisualization.graphs.CircularGraph;
 import com.anwesome.app.soundvisualization.graphs.VisualizingGraph;
 import com.anwesome.app.soundvisualization.graphs.VisualizingGraphType;
 
@@ -25,6 +26,7 @@ public class VisualizingView extends View {
                 this.visualizingGraph = new BarGraph();
                 break;
             case CIRCLEGRAPH:
+                this.visualizingGraph = new CircularGraph();
                 break;
             default:
                 break;
