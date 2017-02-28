@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.anwesome.app.soundvisualization.graphs.BarGraph;
 import com.anwesome.app.soundvisualization.graphs.CircularGraph;
+import com.anwesome.app.soundvisualization.graphs.DotLineGraph;
 import com.anwesome.app.soundvisualization.graphs.VisualizingGraph;
 import com.anwesome.app.soundvisualization.graphs.VisualizingGraphType;
 
@@ -28,6 +29,8 @@ public class VisualizingView extends View {
             case CIRCLEGRAPH:
                 this.visualizingGraph = new CircularGraph();
                 break;
+            case DOTLINEGRAPH:
+                this.visualizingGraph = new DotLineGraph();
             default:
                 break;
         }
